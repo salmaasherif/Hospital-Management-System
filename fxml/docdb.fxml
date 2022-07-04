@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hospital.DocdbController">
+   <children>
+      <VBox layoutX="80.0" layoutY="10.0" prefHeight="123.0" prefWidth="109.0" spacing="4.0">
+         <children>
+            <TextField fx:id="idText" prefHeight="25.0" prefWidth="79.0" promptText="ID" />
+            <TextField fx:id="nameText" prefHeight="25.0" prefWidth="79.0" promptText="Name" />
+            <TextField fx:id="phoneText" prefHeight="25.0" prefWidth="79.0" promptText="Phone" />
+            <TextField fx:id="avText" prefHeight="25.0" prefWidth="79.0" promptText="Available?" />
+         </children>
+      </VBox>
+      <VBox layoutX="11.0" layoutY="16.0" prefHeight="131.0" prefWidth="66.0" spacing="12.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Name" />
+            <Label text="Phone" />
+            <Label text="Availabilty" />
+         </children>
+      </VBox>
+      <Separator layoutX="200.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0" />
+      <TableView fx:id="docTable" editable="true" layoutX="212.0" layoutY="18.0" prefHeight="363.0" prefWidth="370.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="docIdColumn" prefWidth="57.0" text="Id" />
+            <TableColumn fx:id="docNameColumn" prefWidth="72.7999267578125" text="Name" />
+            <TableColumn fx:id="docPhoneNumberColumn" prefWidth="106.39996337890625" text="Phone" />
+            <TableColumn fx:id="docAvColumn" prefWidth="60.0" text="Available" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="62.0" layoutY="160.0" prefHeight="187.0" prefWidth="82.0">
+         <children>
+            <Button fx:id="addDocBtn" mnemonicParsing="false" onAction="#insertDoctor" prefHeight="30.0" prefWidth="82.0" text="Add" />
+            <Button fx:id="updateBtn" layoutY="45.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="82.0" text="Update" />
+            <Button fx:id="refreshbtn" layoutY="137.0" mnemonicParsing="false" onAction="#refresh" prefHeight="30.0" prefWidth="82.0" text="Refresh" />
+            <Button fx:id="homebtn" layoutY="181.0" mnemonicParsing="false" onAction="#home" prefHeight="30.0" prefWidth="82.0" text="Home" />
+            <Button fx:id="deleteBtn" layoutY="91.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="82.0" text="Delete" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
