@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hospital.SetAppController">
+   <children>
+      <VBox layoutX="118.0" layoutY="14.0" prefHeight="123.0" prefWidth="109.0" spacing="4.0">
+         <children>
+            <TextField fx:id="pname" prefHeight="25.0" prefWidth="79.0" promptText="Patient Name" />
+            <TextField fx:id="dname" prefHeight="25.0" prefWidth="79.0" promptText="DoctorName" />
+            <TextField fx:id="section" prefHeight="25.0" prefWidth="79.0" promptText="Department" />
+            <TextField fx:id="time" prefHeight="25.0" prefWidth="79.0" promptText="Time" />
+         </children>
+      </VBox>
+      <VBox layoutX="14.0" layoutY="20.0" prefHeight="131.0" prefWidth="94.0" spacing="12.0">
+         <children>
+            <Label text="Patient Name" />
+            <Label text="Doctor Name" />
+            <Label text="Department" />
+            <Label text="Time" />
+         </children>
+      </VBox>
+      <TableView fx:id="apptable" editable="true" layoutX="269.0" layoutY="22.0" prefHeight="363.0" prefWidth="316.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="pcol" prefWidth="57.0" text="Patient" />
+            <TableColumn fx:id="dcol" prefWidth="72.7999267578125" text="Doctor" />
+            <TableColumn fx:id="tcol" prefWidth="59.99993896484375" text="Time" />
+            <TableColumn fx:id="scol" prefWidth="69.60003662109375" text="Section" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="72.0" layoutY="164.0" prefHeight="187.0" prefWidth="82.0">
+         <children>
+            <Button fx:id="addDocBtn" mnemonicParsing="false" onAction="#addapp" prefHeight="30.0" prefWidth="82.0" text="Add" />
+            <Button fx:id="updateBtn" layoutY="45.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="82.0" text="Update" />
+            <Button fx:id="refreshbtn" layoutY="137.0" mnemonicParsing="false" onAction="#refresh" prefHeight="30.0" prefWidth="82.0" text="Refresh" />
+            <Button fx:id="homebtn" layoutY="181.0" mnemonicParsing="false" onAction="#home" prefHeight="30.0" prefWidth="82.0" text="Home" />
+            <Button fx:id="deleteBtn" layoutY="91.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="82.0" text="Delete" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="248.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0" />
+   </children>
+</AnchorPane>

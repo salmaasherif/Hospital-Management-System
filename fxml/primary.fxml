@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hospital.PrimaryController">
+   <children>
+      <BorderPane layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
+      <Button fx:id="adminButton" layoutX="393.0" layoutY="110.0" onAction="#switchToAdmin" text="Administrator Login">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="regAdminButton" layoutX="393.0" layoutY="173.0" onAction="#onRegAdminClick" text="Register New Admin">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="344.0" layoutY="324.0" minWidth="46.0" onAction="#onExitButtonClick" prefHeight="30.0" prefWidth="97.0" text="Exit">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <VBox layoutX="-1.0" prefHeight="400.0" prefWidth="201.0" style="-fx-background-color: #1e90ff;">
+         <children>
+            <AnchorPane prefHeight="90.0" prefWidth="211.0" style="-fx-background-color: #78addf;">
+               <children>
+                  <Label layoutX="23.0" layoutY="25.0" text="Hospital FX">
+                     <font>
+                        <Font name="Arial" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="56.0" layoutY="109.0" text="‣ Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label layoutX="246.0" layoutY="116.0" text="Already Registered ?" textFill="#6aa6df">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="182.0" text="Create New Account" textFill="#6aa6df">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
